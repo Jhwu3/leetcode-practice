@@ -1,19 +1,19 @@
-# class Solution:
-#     def wordPattern(self, pattern: str, s: str) -> bool:
-#         lst = s.split()
-#         count = 0
-#         seen = {}
-#         if len(lst) != len(pattern):
-#             return False
-#         for i in range(len(lst)):
-#             if lst[i] not in seen:
-#                 if pattern[count] not in seen.values():
-#                     seen[lst[i]] = pattern[count]
-#                 else:
-#                     return False
-#             lst[i] = seen[lst[i]]
-#             count += 1 
-#         return pattern == "".join(lst)
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        lst = s.split()
+        count = 0
+        seen = {}
+        if len(lst) != len(pattern):
+            return False
+        for i in range(len(lst)):
+            if lst[i] not in seen:
+                if pattern[count] not in seen.values():
+                    seen[lst[i]] = pattern[count]
+                else:
+                    return False
+            lst[i] = seen[lst[i]]
+            count += 1 
+        return pattern == "".join(lst)
     
     
 # this problem gives a pattern in lowercase letters like: "abba" and one non empty string and in this
