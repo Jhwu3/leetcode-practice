@@ -18,7 +18,7 @@ class Solution:
                 left += 1
         return greatest
     
-For this problem it asks us to find the most water that a container can store given a list of numbers 
-that represent the height of the walls of the container. So to do this we need to set up two pointers on the 
-right and left. and then check if the width multiplied by the lower of the two sides creates a larger volume 
-that we have seen so far. Then after we check the whole list we return the answer.
+# For this problem it asks us to find the most water that a container can store given a list of numbers 
+# that represent the height of the walls of the container. So to do this we need to set up two pointers on the 
+# right and left. and then check if the width multiplied by the lower of the two sides creates a larger volume 
+# that we have seen so far. Then after we check the whole list we return the answer.
