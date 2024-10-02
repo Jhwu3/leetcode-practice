@@ -1,0 +1,13 @@
+class Solution:
+    def hasAllCodes(self, s: str, k: int) -> bool:
+        seen = set()
+        for i in range(len(s) - (k-1)): 
+            seen.add(s[i:i+k])
+    
+        return len(seen) == 2 ** k
+    
+# This problem ask us to find within a given string if every binary code of length k is a substring in the given string.
+# Then what i did was use a set to store every unique substring of length k in the string. originally, i then generated 
+# every possible substring of length k then checked if that existed inside the set. But what i did not recognized was that
+# there was no need to do that and all we need to do is check if the amount of unique substrings we have in our set is equal 
+# to the amount we are supposed to have. this way we dont need to use another loop. 
